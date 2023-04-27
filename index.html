@@ -1,48 +1,82 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="./css/qwiz.css" rel="stylesheet">
-    <title>Qwiz</title>
-  </head>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="./css/qwiz.css" rel="stylesheet">
+        <title>Qwiz</title>
+	</head>
 
-  <body id="container">
-    
-    <header>
-        <h1>JavaScript Quiz</h1>
-        <p>Test your knowledge in <strong>JavaScript Fundamentals</strong></p>
-    </header>
+	<body>
+		<div class="mainPage">
+            <h1 class="mainPageTitle">Подберём вуз мечты</h1>
+            <p class="mainPageText">Ответьте на 8 простых вопросов, и мы составим список наболее подходящих для вас вузов</p>
+            
+            <div class="mainPageGroup">
+                <div class="mainPageGroupRectangle"></div>
 
-        <section>
-            <div id="results"></div>
-            <form name="quizForm" onsubmit="return submitAnswers()">
-                <h3>1. In which HTML element do we put in JavaScript code?</h3>
-                <input type="radio" name="q1" value="a" id="q1a">a. &lt;js&gt;<br>
-                <input type="radio" name="q1" value="b" id="q1b">b. &lt;script&gt;<br>
-                <input type="radio" name="q1" value="c" id="q1c">c. &lt;body&gt;<br>
-                <input type="radio" name="q1" value="d" id="q1d">d. &lt;link&gt;<br>
-                
-                    <br><br>
-                <h3>2. What is the vision of JavaScript varibles called?</h3>
-                <input type="radio" name="q2" value="a" id="q2a">a. inline<br>
-                <input type="radio" name="q2" value="b" id="q2b">b. line of sight<br>
-                <input type="radio" name="q2" value="c" id="q2c">c. directional<br>
-                <input type="radio" name="q2" value="d" id="q2d">d. scope<br>      
-                        
-                    <br><br>
-                <h3>3. JavaScript is a version of Java.</h3>
-                <input type="radio" name="q3" value="a" id="q3a">a. true<br>
-                <input type="radio" name="q3" value="b" id="q3b">b. false<br>  
-                        
-                    <br><br>
-                <input type="submit" value="Submit Answers">
+                <p class="mainPageGroupFree">Бесплатно</p>
+
+                <p class="mainPageGroupSeconds">за 30 секунд</p>
+
+                <div class="mainPageGroupMagnifier">
+                    <div class="magnifierStick"></div>
+                    <div class="magnifierLens"></div>
+                </div>
+
+                <div class="mainPageGroupLine"></div>         
+            </div>
+
+            <form class="mainPageForm">
+
+                <div class="mainPageFormTitleRow">
+                    <p class="mainPageFormTitle">Для кого вы ищете учебное заведение?</p>
+                    <p class="mainPageFormTitleStep">Шаг 1/8</p>
+                </div>
+
+                <div class="mainPageFormRow">
+
+                    <div class="mainPageFormColumn">
+                        <div class="mainPageFormItem">
+                            <label class="mainPageFormText">Себе</label>
+                            <input type="radio" class="mainPageFormRadio" name="contact" value="Себе">
+                        </div>
+
+                        <div class="mainPageFormItem">
+                            <label class="mainPageFormText">Родственникy</label>
+                            <input type="radio" class="mainPageFormRadio" name="contact" value="Родственник">
+                        </div>
+
+                        <div class="mainPageFormItem">                    
+                            <label class="mainPageFormText">Ребенку</label>
+                            <input type="radio" class="mainPageFormRadio" name="contact" value="Ребенку">
+                        </div>
+
+                       
+                    </div>
+                    
+                    <div class="mainPageFormColumn">
+                        <div class="mainPageFormItem">
+                            <label class="mainPageFormText">Супругу/супруге</label>
+                            <input type="radio" class="mainPageFormRadio" name="contact" value="Супруг/супруге">
+                        </div>
+
+                        <div class="mainPageFormItem">
+                            <label class="mainPageFormText">Коллега</label>
+                            <input type="radio" class="mainPageFormRadio" name="contact" value="Коллега">
+                        </div>
+            
+                        <div class="mainPageFormItem">              
+                            <label class="mainPageFormText">Другое</label>
+                            <input type="radio" class="mainPageFormRadio" name="contact" value="Другое">
+                        </div>
+                    </div>
+                </div>
+                <button class="mainPageFormBtn">Далее ></button>
             </form>
-        </section>
+		
+        </div>
 
-        <footer>
-            <p>Copyright &copy; 2023</p>
-        </footer> 
         <script src="./qwiz.js"></script>
-    </body>
+	</body>
 </html>
